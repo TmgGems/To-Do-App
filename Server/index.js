@@ -1,9 +1,16 @@
 const express = require("express");
+const mongoose = require("mongoose");
+
 const app = express();
+const port = 8090;
+
+mongoose.connect("mongodb://127.0.0.1:27017/to-do-app").then(()=>{
+    console.log("Connected to MongoDB");
+});
 
 const indexRouter = require("./routes");
 
-const port = 8090;
+app.use(express.json());
 
 app.use("/", indexRouter);
 
