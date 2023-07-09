@@ -1,6 +1,6 @@
-const mongoose = require("mongosse");
+const mongoose = require("mongoose");
 
-const ObjectId = mongoose.Schema.Types;
+const {ObjectId} = mongoose.Schema;
 
 const subTaskSchema = mongoose.Schema({
     title:{type:String,required:true},
@@ -8,4 +8,4 @@ const subTaskSchema = mongoose.Schema({
     todo_id:{type:ObjectId,ref:"Todo"},//reference to Todo mode
 });
 
-module.exports = mongoose.model("Subtask",subtaskSchema);
+module.exports = mongoose.model("Subtask",subTaskSchema);
