@@ -1,10 +1,7 @@
 const express = require("express");
 const router = express.Router();
-
-const apiRouter = require("./routes.api");
-
-router.use('/api/v1',apiRouter);
-
-
+router.get("/",(req,res)=>{
+    res.send("Hello From todo");
+})
 
 module.exports = router;
