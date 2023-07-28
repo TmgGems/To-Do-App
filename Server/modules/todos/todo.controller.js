@@ -8,7 +8,16 @@ const create = (payload) =>{
 
 const List =() =>{
     //Complex aggregation
-    return TodoModel.find();
+    return TodoModel.aggregate([
+        {
+          '$lookup': {
+            'from': 'subtasks', 
+            'localField': '_id', 
+            'foreignField': 'todo_id', 
+            'as': 'result'
+          }
+        }
+      ]);
 };
 
 const getById = (id) =>{

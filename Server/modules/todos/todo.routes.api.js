@@ -32,9 +32,5 @@ router.delete("/:id",async (req,res)=>{
     res.json({data:results});
 });
 
-router.post("/",async(req,res)=>{
-    const todoResult = await todoController.create(req.body);
-    res.json({data:todoResult});
-});
 
 module.exports = router;
