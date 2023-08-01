@@ -1,3 +1,14 @@
-1 title component
+1 Title component
 2 Todo omponent
     a.Add new task button
+    b.Input
+    c.label
+    
+3. List Data component
+    a.Checkbox
+    b.TaskName
+    c.Deletebutton
+    d.Add Subtask (TODO Component) Resuable
+
+4. Conditional Rendering
+    a.If task 
