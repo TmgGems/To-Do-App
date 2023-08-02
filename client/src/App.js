@@ -5,6 +5,7 @@ import Garage from "./components/Garage";
 import Ternary from "./components/ternaryoperator";
 import LIST from "./components/list";
 import FavoriteColor from "./components/firstHook";
+import Car from "./components/secondHook";
 const App=()=>{
     const cars = ['BMW'];
     return <>
@@ -15,6 +16,7 @@ const App=()=>{
     <Ternary/>
     <LIST/> 
     <FavoriteColor/>
+    <Car/>
     </>
 
 };
