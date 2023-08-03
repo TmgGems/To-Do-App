@@ -7,11 +7,12 @@ const useFetch = (url) =>{
     const [error, setError] = useState(null);
 
     useEffect(()=>{
+        let isMounted = true;
         setloading(true);
         const fetchData = async ()=>{
             try{
                 const{data} = await axios(url);
-                if(data){
+                if(isMounted && data){
                     setloading(false);
                     setData(data.data);
                 }
@@ -21,6 +22,9 @@ const useFetch = (url) =>{
             }
         };
         fetchData();
+        return () =>{
+            isMounted = false;
+        };
     }, [url]);  
     
     return {data,loading,error};
