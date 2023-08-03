@@ -1,22 +1,17 @@
+import { Col,Container, Row } from "react-bootstrap";
 import Title from"./components/Title";
-import Example from"./components/Example";
-import Goal from"./components/Goal";
-import Garage from "./components/Garage";
-import Ternary from "./components/ternaryoperator";
-import LIST from "./components/list";
-import FavoriteColor from "./components/firstHook";
-import Car from "./components/secondHook";
+import AddTodo from "./components/AddTodo";
 const App=()=>{
-    const cars = ['BMW'];
     return <>
-    <Title name ="TODO App"/>
-     <Example />
-    <Goal isGoal={true}/>
-    <Garage cars={cars}/>
-    <Ternary/>
-    <LIST/> 
-    <FavoriteColor/>
-    <Car/>
+        <Container>
+        <Row>
+            <Col md={{span: 6, offset: 3}}>
+              <Title name = "TODO App"/>
+              <AddTodo label = "Add New Task" placeholder = "Eg: Do Homework" />
+            </Col>
+        </Row>
+
+      </Container>
     </>
 
 };
