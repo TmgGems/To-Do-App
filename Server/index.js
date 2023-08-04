@@ -1,11 +1,15 @@
+require("dotenv").config();
+
+
 const cors = require("cors");
 const express = require("express");
 const mongoose = require("mongoose");
 
 const app = express();
-const port = 8002;
+const port =process.env.PORT|| 4002;
 
-mongoose.connect("mongodb://127.0.0.1:27017/to-do-app").then(()=>{
+
+mongoose.connect(process.env.DB).then(()=>{
     console.log("Connected to MongoDB");
 });
 
