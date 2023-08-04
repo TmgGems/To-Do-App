@@ -1,10 +1,10 @@
-import { Col, Container, Row } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import Title from "./components/Title";
 import Todo from "./pages/Todo";
 import AddTodo from "./components/AddTodo";
-import { API_SERVER } from "./contexts";
+import { API_SERVER } from "./constants";
 
-const App = () => {
+function App() {
   return (
     <>
       <Container>
@@ -13,7 +13,7 @@ const App = () => {
             <Title name="TODO App" />
             <AddTodo
               label="Add New Task"
-              placeholder="Eg: Do Homework"
+              placeholder="Eg: Do Laundry"
               url={`${API_SERVER}/todos`}
             />
             <Todo />
@@ -22,6 +22,6 @@ const App = () => {
       </Container>
     </>
   );
-};
+}
 
 export default App;

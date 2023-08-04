@@ -1,9 +1,10 @@
-const Title =({name}) =>{
-    return(
-        <>
+const Title = ({ name }) => {
+    return (
+      <>
         <h1 className="text-center">{name}</h1>
-        </>
-    )
-};
-
-export default Title;
+      </>
+    );
+  };
+  
+  export default Title;
+  
